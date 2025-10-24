@@ -1,3 +1,7 @@
+import os
+import base64
+from typing import Optional
+import httpx
 from fastmcp import FastMCP
 
 mcp = FastMCP("My MCP Server")
@@ -5,7 +9,6 @@ mcp = FastMCP("My MCP Server")
 @mcp.tool
 def greet(name: str) -> str:
     return f"Hello, {name}!"
-
 
 
 def get_auth_headers():
